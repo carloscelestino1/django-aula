@@ -29,7 +29,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.ngrok.io']
+
+CSRF_TRUSTED_ORIGINS = ['https://9abb-179-34-118-175.sa.ngrok.io']
 
 
 # Application definition
@@ -44,6 +46,7 @@ INSTALLED_APPS = [
     'main', #adicionar app ao projeto
     'crispy_forms',
     'accounts',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
